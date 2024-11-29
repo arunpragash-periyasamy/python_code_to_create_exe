@@ -1,0 +1,8 @@
+/build
+/dist/
+cloudbook_installer.spec
+dist - Copy/
+__pycache__/
+GUI/build/
+GUI/dist/
+infogreen-billing.tar

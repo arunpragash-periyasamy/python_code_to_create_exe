@@ -1,0 +1,43 @@
+Command: cd /usr/backend
+Output:
+
+Error (if any):
+
+
+--------------------------------------------------------------------------------
+Command: docker pull arunpragash/angular_todo:1.1
+Output:
+1.1: Pulling from arunpragash/angular_todo
+Digest: sha256:5a49ab81812b09ae351fa70db0e744980815c99f5fc7c4ed02f1aa811a05a6c7
+Status: Image is up to date for arunpragash/angular_todo:1.1
+docker.io/arunpragash/angular_todo:1.1
+
+Error (if any):
+
+
+--------------------------------------------------------------------------------
+Command: docker ps --filter "ancestor=arunpragash/angular_todo:1.1" --format '{{.ID}}' | grep -q . || (docker ps -a --filter "ancestor=arunpragash/angular_todo:1.1" --filter "status=exited" --format '{{.ID}}' | grep -q . && docker ps -a --filter "ancestor=arunpragash/angular_todo:1.1" --filter "status=exited" --format '{{.ID}}' | xargs -r docker start) || docker run -d --restart=always -p 9000:80 arunpragash/angular_todo:1.1
+Output:
+
+Error (if any):
+
+
+--------------------------------------------------------------------------------
+Command: cd /usr/backend && docker compose up --build -d
+Output:
+
+Error (if any):
+time="2024-11-29T10:43:18Z" level=warning msg="/usr/backend/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container mysql  Running
+ Container backend-app-1  Running
+ Container backend-web-1  Running
+
+
+--------------------------------------------------------------------------------
+Command: exit
+Output:
+
+Error (if any):
+
+
+--------------------------------------------------------------------------------
